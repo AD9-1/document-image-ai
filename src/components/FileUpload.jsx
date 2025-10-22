@@ -1,6 +1,6 @@
 import React from "react";
 import {Buffer} from 'buffer';
-const FileUpload = () => {
+const FileUpload = ({setFile}) => {
   const handleFileUpload = async(event) => {
     const fileUpload=await event.target.files[0].arrayBuffer();
     const file1={
@@ -8,6 +8,7 @@ const FileUpload = () => {
       file:Buffer.from(fileUpload).toString('base64'),
     }
     console.log("Uploaded file:", file1);
+    setFile(file1);
   }
   return (
     <section className="place-items-center">
