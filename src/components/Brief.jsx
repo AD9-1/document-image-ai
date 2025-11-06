@@ -35,6 +35,7 @@ const Brief = ({ file }) => {
 
   return (
     <div className="place-items-center py-5">
+      <img src={file.imageUrl} alt="Preview Image" className="w-3/4"/>
       {status === "idle" ? (
         <p>Reviewing uploaded files...</p>
       ) : (

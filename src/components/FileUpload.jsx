@@ -6,13 +6,14 @@ const FileUpload = ({setFile}) => {
     const file1={
       type:event.target.files[0].type,
       file:Buffer.from(fileUpload).toString('base64'),
+      imageUrl:URL.createObjectURL(event.target.files[0])
     }
     console.log("Uploaded file:", file1);
     setFile(file1);
   }
   return (
     <section className="place-items-center">
-      <h2 className="text-2xl">Get Started</h2>
+      <h2 className="text-2xl mb-3">Get Started</h2>
       <input
         type="file"
         accept=".pdf, .docx,image/*"
