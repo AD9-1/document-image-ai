@@ -1,4 +1,4 @@
-import React from "react";
+
 import {Buffer} from 'buffer';
 const FileUpload = ({setFile}) => {
   const handleFileUpload = async(event) => {

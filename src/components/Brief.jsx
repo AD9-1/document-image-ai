@@ -20,7 +20,10 @@ const Brief = ({ file }) => {
               mimeType: "application/pdf",
             },
           },
-          "Summarize this document",
+          `Summarize this document
+          in one short paragraph.Use simple language no markdown
+          and no html formatting.
+          `,
         ]);
         console.log(result.response.text());
         setStatus("Summary generated");
@@ -35,7 +38,7 @@ const Brief = ({ file }) => {
 
   return (
     <div className="place-items-center py-5">
-      <img src={file.imageUrl} alt="Preview Image" className="w-3/4"/>
+      <img src={file.imageUrl} alt="Preview Image" className="w-3/4 "/>
       {status === "idle" ? (
         <p>Reviewing uploaded files...</p>
       ) : (
